@@ -5,6 +5,14 @@ class App extends Component {
   state = {
     count: 0,
     isOn: false
+  };
+
+  componentDidMount() {
+    document.title = `You have clicked ${this.state.count} times`;
+  }
+
+  componentDidUpdate() {
+    document.title = `You have clicked ${this.state.count} times`;
   }
 
   incrementCount = () => {
